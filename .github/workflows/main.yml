@@ -1,4 +1,3 @@
-# A simple .yml template locate on <repository/.github/workflows/appdoem_ci.yml>
 name: APPDOME_CI_EXAMPLE
 
 # Controls when the workflow will run
@@ -21,55 +20,27 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Appdome build-2secure
-  # You may pin to the exact commit or the version.
-  # uses: Appdome/github_build-2secure@d702538170b40d4b45acb5cbfb43f8d01a6c3dc1
-  uses: Appdome/github_build-2secure@1.2.1
-  with:
-    # Appdome API key
-    APPDOME_API_TOKEN: ${{ secrets.APPDOME_API_TOKEN }}
-    # APK file
-    APP_FILE: app/debug/app-debug.apk
-    # Appdome FusionSetId iOS/Android
-    FUSION_SET_ID: ${{ secrets.FUSION_SET_ID }}
-    # iOS/Android Signin option
-    SIGN_OPTIONS: "SIGN_ON_APPDOME"
-    # Keystore sign file
-    KEYSTORE_FILE: ${{ secrets.KEYSTORE_BASE64 }}
-    # iOS sign file
-    MOBILE_PROVISION_PROFILE_FILE: # optional, default is None
-    # iOS sign file
-    ENTITLEMENTS_FILE: # optional, default is None
-    # Keystore password sign file
-    KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-    # keystore alias
-    KEYSTORE_ALIAS: ${{ secrets.KEY_ALIAS }}
-    # keystore key password
-    KEYSTORE_KEY_PASSWORD: ${{ secrets.KEYSTORE_KEY_PASS }}
-    # signing sha1 fingerprint
-    SIGN_FINGERPRINT: # optional, default is None
-    # Google Play App Signing program
-    GOOGLE-PLAY-SIGNING: # optional, default is false
-    # Certificate sign file
-    CERTIFICATE_FILE: # optional, default is None
-    # Certificate password sign file
-    CERTIFICATE_PASSWORD: # optional, default is None
-    # your team-id
-    TEAM-ID: # optional, default is None
-    # whether build with logs or not
-    BUILD_WITH_LOGS: # optional
-    # Should there be a second universal apk output (for aab apps)?
-    SECOND_OUTPUT: # optional
-    # Specify a name for the output app (without the extension)
-    OUTPUT_APP_NAME: # optional, default is None
-    # Build to test option
-    BUILD_TO_TEST: # optional, default is None
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
     - name: Appdome build-2secure
-      uses: Appdome/github_build-2secure@1.0
+      # You may pin to the exact commit or the version.
+      # uses: Appdome/github_build-2secure@fbc9937e9970f727055e9c46554bcc966d4b24ad
+      uses: Appdome/github_build-2secure@1.2.1
       with:
-        APP_FILE: ""
-        FUSION_SET_ID: ""
-        SIGN_OPTIONS: ""
-        APPDOME_API_TOKEN: ""
+        # Appdome API key
+        APPDOME_API_TOKEN: ${{ secrets.APPDOME_API_TOKEN }}
+        # APK file
+        APP_FILE: app/debug/app-debug.apk
+        # Appdome FusionSetId iOS/Android
+        FUSION_SET_ID: ${{ secrets.FUSION_SET_ID }}
+        # iOS/Android Signin option
+        SIGN_OPTIONS: "SIGN_ON_APPDOME"
+        # Keystore sign file
+        KEYSTORE_FILE: ${{ secrets.KEYSTORE_BASE64 }}
+        # iOS sign file
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        # keystore alias
+        KEYSTORE_ALIAS: ${{ secrets.KEY_ALIAS }}
+        # keystore key password
+        KEYSTORE_KEY_PASSWORD:  ${{ secrets.KEYSTORE_KEY_PASS }}
+        # signing sha1 fingerprint

@@ -36,6 +36,6 @@ jobs:
         # iOS/Android Signin option
         SIGN_OPTIONS: "PRIVATE_SIGNING"
         # Keystore sign file
-        SIGN_FINGERPRINT: ${{ secrets.APPDOME_SIGN_FINGERPRINT }}
+        SIGN_FINGERPRINT: ${{ secrets.SIGN_FINGERPRINT }}
     
    

@@ -34,13 +34,8 @@ jobs:
         # Appdome FusionSetId iOS/Android
         FUSION_SET_ID: ${{ secrets.FUSION_SET_ID }}
         # iOS/Android Signin option
-        SIGN_OPTIONS: "SIGN_ON_APPDOME"
+        SIGN_OPTIONS: "PRIVATE_SIGNING"
         # Keystore sign file
-        KEYSTORE_FILE: ${{ secrets.KEYSTORE_BASE64 }}
-        # iOS sign file
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-        # keystore alias
-        KEYSTORE_ALIAS: ${{ secrets.KEY_ALIAS }}
-        # keystore key password
-        KEYSTORE_KEY_PASSWORD:  ${{ secrets.KEYSTORE_KEY_PASS }}
-        # signing sha1 fingerprint
+        SIGN_FINGERPRINT: ${{ secrets.APPDOME_SIGN_FINGERPRINT }}
+    
+   
